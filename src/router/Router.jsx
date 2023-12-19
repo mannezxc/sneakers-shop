@@ -1,9 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import App from "../App"
-
-import UnknownLink from "../MissingPage"
 import Favorites from "../components/main/favorites/Favorites"
 import SneakersState from "../context/CustomState"
+import UnknownLink from "../MissingPage"
+import App from "../App"
 
 const Router = () => {
     return (

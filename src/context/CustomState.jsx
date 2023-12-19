@@ -1,5 +1,5 @@
-import { createContext, useEffect, useState } from "react"
-import { SneakersData } from "../servces/sneakers.service"
+import { useEffect, useState } from "react"
+import { SneakersData } from "../services/sneakers.service"
 import { CustomContext } from "./CustomContext"
 
 const SneakersState = ({ children }) => {
@@ -17,19 +17,16 @@ const SneakersState = ({ children }) => {
                 setData(Array.from(data))
                 setFilteredSneaker(data)
                 setLoading(false)
-            }, 1000)
+            }, 500)
         }
         if (localStorage.getItem('purchases') != null) {
             setPurchase(JSON.parse(localStorage.getItem('purchases')))
         }
+        if (localStorage.getItem('favorites') != null) {
+            setFavorite(JSON.parse(localStorage.getItem('favorites')))
+        }
         fetchData()
     }, [])
-
-    useEffect(() => {
-        if (purchase.length > 0) {
-            localStorage.setItem('purchases', JSON.stringify(purchase))
-        }
-    }, [purchase])
 
     const sumPurchase = purchase.reduce((acum, item) => acum + item.cost, 0)
 
@@ -43,20 +40,34 @@ const SneakersState = ({ children }) => {
     })
 
     const addFavorite = (product) => {
-        setFavorite(prev => [...prev, { ...product }])
+        setFavorite(prev => {
+            const fav = [...prev, { ...product }]
+            localStorage.setItem('favorites', JSON.stringify(fav))
+            return fav
+        })
     }
     const removeFavorite = (product) => {
-        setFavorite(prev => prev.filter(prev => prev.id != product.id))
+        setFavorite(prev => {
+            const fav = prev.filter(prev => prev.id != product.id)
+            localStorage.setItem('favorites', JSON.stringify(fav))
+            return fav
+        })
     }
 
     const addPurchase = (product) => {
-        setPurchase(prev => [...prev, {
-            ...product
-        }])
+        setPurchase(prev => {
+            const pur = [...prev, {...product}]
+            localStorage.setItem('purchases', JSON.stringify(pur))
+            return pur
+        })
     }
 
     const removePurchase = (product) => {
-        setPurchase(prev => prev.filter(prev => prev.id != product.id))
+        setPurchase(prev => {
+            const pur = prev.filter(prev => prev.id != product.id)
+            localStorage.setItem('purchases', JSON.stringify(pur))
+            return pur
+        })
     }
 
     const value = {

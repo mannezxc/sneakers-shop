@@ -27,7 +27,7 @@ const Purchase = () => {
                 <div className="purchases-block-title">
                     <span className="purchases-bi-trash">Корзина</span>
                     <button className="purchases-bi-btn" onClick={purchaseButtonClick}>
-                        <img src='/public/plus.svg' alt="" />
+                        <img src='/plus.svg' alt="" />
                     </button>
                 </div>
             </div>
@@ -43,7 +43,7 @@ const Purchase = () => {
                                 </div>
                             </div>
                             <button className="purchases-bi-btn" onClick={() => removePurchase(item)}>
-                                <img src="/public/plus.svg" alt="" />
+                                <img src="/plus.svg" alt="" />
                             </button>
                         </li>
                         )}
@@ -62,7 +62,7 @@ const Purchase = () => {
                 </div>
             </div>
             : <div className="purchases-block-false">
-                <img src="/public/trash-box.svg" alt="" />
+                <img src="/trash-box.svg" alt="" />
                 <span>Корзина пустая</span>
                 <p>Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.</p>
                 <button onClick={purchaseButtonClick} className="btn back-button">Вернуться назад</button>

@@ -1,6 +1,6 @@
+import { CustomContext } from '../../../context/CustomContext';
 import { useContext, useState } from 'react';
 import './sneakers.scss'
-import { CustomContext } from '../../../context/CustomContext';
 
 const Sneakers = () => {
     const { data, 
@@ -71,7 +71,6 @@ const Sneakers = () => {
                                 {purchase.findIndex(product => product.id == sneaker.id) > -1
                                     ? <button className='sneaker-purchase-added' onClick={() => removePurchase(sneaker)} />
                                     : <button className='sneaker-purchase-add' onClick={() => addPurchase(sneaker)} />}
-
                             </div>
                         </div>
                     </li>

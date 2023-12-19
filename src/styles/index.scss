@@ -8,6 +8,17 @@ body {
   background: #E7F6FF;
   color: #000;
 
+  &::-webkit-scrollbar {
+    width: 10px;
+    
+  }
+  &::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #d4d4d4;
+    border-radius: 20px;
+  }
 }
 
 .btn {
@@ -41,8 +52,6 @@ body {
   }
 }
 
-
-
 .purchase-bg {
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -59,6 +68,7 @@ body {
   border: 1px solid #F2F2F2;
   width: 32px;
   height: 32px;
+
   img {
     transform: rotate(45deg)
   }
@@ -78,13 +88,10 @@ body {
   justify-content: space-between;
 
   .purchases-block-items {
-    
     .purchases-block-title {
       display: flex;
       justify-content: space-between;
       margin-bottom: 30px;
-
-      
     }
 
     .purchases-bi-trash {
@@ -141,7 +148,7 @@ body {
         transform: translateY(-50%) rotate(180deg);
         width: 16px;
         height: 14px;
-        background: url('/public/arrow-white.svg');
+        background: url('/arrow-white.svg');
       }
     }
   }
@@ -192,7 +199,6 @@ body {
           line-height: normal;
           margin-bottom: 8px;
           width: 150px;
-
         }
 
         span {
@@ -240,7 +246,7 @@ body {
         transform: translateY(-50%);
         width: 16px;
         height: 14px;
-        background: url('/public/arrow-white.svg');
+        background: url('/arrow-white.svg');
       }
     }
   }

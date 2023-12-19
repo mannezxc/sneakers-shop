@@ -18,9 +18,8 @@
         border-radius: 10px;
         border: 1px solid #F3F3F3;
         padding: 13px 0 13px 46px;
-        background: url('/public/search-icon.svg') center left no-repeat;
+        background: url('/search-icon.svg') center left no-repeat;
         background-position: 16px center;
-
 
         &::placeholder {
             color: #C4C4C4;
@@ -74,7 +73,7 @@
                 border-radius: 7px;
                 opacity: 0.3;
                 border: 1px solid #BDBDBD;
-                background: url('/public/favorites.svg') center center/50% no-repeat;
+                background: url('/favorites.svg') center center/50% no-repeat;
                 position: absolute;
             }
 
@@ -83,7 +82,7 @@
                 height: 32px;
                 top: 9px;
                 border-radius: 7px;
-                background: url('/public/favorite.svg') center center/50% no-repeat, #FEF0F0;
+                background: url('/favorite.svg') center center/50% no-repeat, #FEF0F0;
                 position: absolute;
             }
 
@@ -111,8 +110,7 @@
                 padding: 0 16px;
                 border-radius: 8px;
                 border: 1px solid #F2F2F2;
-                background: url('/public/plus.svg') center center no-repeat;
-                transition: .9s;
+                background: url('/plus.svg') center center no-repeat;
             }
 
             .sneaker-purchase-added {
@@ -120,8 +118,7 @@
                 line-height: 5px;
                 padding: 0 16px;
                 border-radius: 8px;
-                background: url('/public/galochka.svg') center center no-repeat, linear-gradient(180deg, #89F09C 0%, #3CC755 100%);
-                transition: .9s;
+                background: url('/galochka.svg') center center no-repeat, linear-gradient(180deg, #89F09C 0%, #3CC755 100%);
             }
 
             .sneaker-cost {
@@ -208,6 +205,4 @@
             }
         }
     }
-
-    
 }

@@ -1,12 +1,12 @@
+import { CustomContext } from '../../../context/CustomContext'
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import '../sneakers-list/sneakers.scss'
 import '../../main/main.scss'
 import './favorites.scss'
-import '../sneakers-list/sneakers.scss'
-import { CustomContext } from '../../../context/CustomContext'
-import { Link } from 'react-router-dom'
 
 const FavoritesMaket = () => {
-    const { data, purchase, addPurchase, formatCost, favorite, addFavorite, removeFavorite } = useContext(CustomContext)
+    const { purchase, addPurchase, formatCost, favorite, addFavorite, removeFavorite } = useContext(CustomContext)
 
     return <main>
         <div className="container">
@@ -40,15 +40,14 @@ const FavoritesMaket = () => {
                         </li>
                     })}
                 </ul>
-            </div> :
+            </div>
+                :
                 <div className='favorites-false'>
-                    <img src="/public/smile-plead.svg" alt="" />
+                    <img src="/smile-plead.svg" alt="" />
                     <span>Закладок нет :(</span>
                     <p>Вы ничего не добавляли в закладки</p>
                     <Link to={'/'} className=''>Вернуться назад</Link>
                 </div>}
-
-
         </div>
     </main>
 }

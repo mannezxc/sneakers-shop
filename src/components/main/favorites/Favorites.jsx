@@ -1,5 +1,4 @@
 import Purchase from "../../../Purchase"
-import SneakersState from "../../../context/CustomState"
 import Header from "../../header/Header"
 import FavoritesMaket from "./FavoritesMaket"
 
