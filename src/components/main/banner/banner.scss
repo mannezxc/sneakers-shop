@@ -1,0 +1,112 @@
+.banner {
+    width: 100%;
+    border-radius: 20px;
+    background: #F4EFE9;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &:hover .btn-slide-right, 
+    &:hover .btn-slide-left {
+        opacity: 1;
+    }
+    .banner-block-slider {
+        overflow: hidden;
+    }
+    .banner-block-image {
+        display: flex;
+        height: 100%;
+        width: 2880px;
+        height: 100%;
+        position: relative;
+        transition: ease .4s;
+        .banner-image {
+            transition: 1s;
+            width: 960px;
+            height: 100%;
+            position: relative;   
+        }
+    }
+
+    .btn-slide-left {
+        opacity: 0;
+        z-index: 1;
+        position: absolute;
+        left: -15px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        transition: ease .3s;
+        background: url('/public/back\ icon.svg') center center no-repeat , #fff;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
+    }
+
+    .btn-slide-right {
+        opacity: 0;
+        z-index: 1;
+        position: absolute;
+        right: -15px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        transition: ease .3s;
+        transform: rotate(180deg);
+        background: url('/public/back\ icon.svg') center center no-repeat , #fff;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
+    }
+}
+
+.banner-sponsors {
+    width: 99px;
+    height: 40px;
+    top: 16px;
+    left: 20px;
+    position: absolute
+}
+
+.banner-buy {
+    margin: 0 17px 0 61px;
+    width: 400px;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: normal;
+    color: #000;
+
+    .banner-title {
+        margin-bottom: 10px;
+
+        .banner-stan {
+            color: #8BB43C;
+
+            span {
+                color: #000;
+            }
+        }
+    }
+
+    .buy-button {
+        border-radius: 110px;
+        background: #A5D364;
+        color: #fff;
+        padding: 14px 55px;
+        color: #FFF;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+}
+
+.banner-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0px 20px 20px 0px;
+
+    img {
+        width: 100%;
+    }
+}
